@@ -559,3 +559,15 @@ def dehazeformer_l():
 		num_heads=[2, 4, 6, 1, 1],
 		attn_ratio=[1/4, 1/2, 3/4, 0, 0],
 		conv_type=['Conv', 'Conv', 'Conv', 'Conv', 'Conv'])
+
+
+def dehazeformer_shd():
+	return DehazeFormer(
+		embed_dims=[96, 24, 24, 24, 96],
+		mlp_ratios=[2., 4., 4., 2., 2.],
+		depths=[12, 12, 12, 12, 12],
+		num_heads=[2, 4, 6, 1, 1],
+		attn_ratio=[1/4, 1/2, 3/4, 0, 0],
+		conv_type=['DWConv', 'DWConv', 'DWConv', 'DWConv', 'DWConv']
+	)
+
